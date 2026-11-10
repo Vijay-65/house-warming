@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>House Warming Ceremony · You’re Invited</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Parisienne&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* :root {
+      --bg: #f1ebe4;
+      --paper: #fbf7f2;
+      --card: #fffdf9;
+      --ink: #4a3b32;
+      --soft: #8a7a6e;
+      --gold: #b88a4a;
+      --olive: #7d7f4f;
+      --saffron: #e8741a;
+      --line: #e6d9c6;
+      --leaf: #8aa04a;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
+    } */
+
+
+    :root {
+      --bg: #f1ebe4;
+      --paper: #fbf7f2;
+      --card: #fffdf9;
+      --ink: #4a3b32;
+      --soft: #8a7a6e;
+      --gold: #b88a4a;
+      --olive: #7d7f4f;
+      --saffron: #e8741a;
+      --line: #e6d9c6;
+      --leaf: #8aa04a;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
+    }
+
+
+
+
+    /* @media (prefers-color-scheme:dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #241b16;
+        --paper: #2e231c;
+        --card: #382b22;
+        --ink: #f3e8da;
+        --soft: #c1ad98;
+        --line: #54443a
+      }
+    } */
+
+    @media (prefers-color-scheme:dark) {
+      :root:not([data-theme="light"]) {
+        --bg: #d2c8c2;
+        --paper: #E9DFD0;
+        --card: #fffbf9;
+        --ink: #0e0c0a;
+        --soft: #98611a;
+        /* a85706*/
+        --line: #ac8871;
+      }
+    }
+
+    html {
+      scroll-padding-top: env(safe-area-inset-top, 0px);
+      scroll-behavior: smooth
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font: 400 14px/1.6 "Plus Jakarta Sans", system-ui, sans-serif;
+      display: flex;
+      justify-content: center;
+      overflow-x: hidden
+    }
+
+    .page {
+      width: 100%;
+      max-width: 430px;
+      background: var(--paper);
+      min-height: 100vh;
+      position: relative;
+      padding-bottom: 40px
+    }
+
+    .serif {
+      font-family: "Cormorant Garamond", Georgia, serif
+    }
+
+    .script {
+      font-family: "Parisienne", "Cormorant Garamond", cursive;
+      color: var(--gold)
+    }
+
+    .vine {
+      position: absolute;
+      top: 0;
+      width: 90px;
+      height: 150px;
+      opacity: .9;
+      pointer-events: none
+    }
+
+    .vine.l {
+      left: 0
+    }
+
+    .vine.r {
+      right: 0;
+      transform: scaleX(-1)
+    }
+
+    header {
+      text-align: center;
+      padding: 56px 24px 0;
+      position: relative
+    }
+
+    header small {
+      display: block;
+      font-size: 11px;
+      letter-spacing: .14em;
+      color: var(--soft)
+    }
+
+    header h1 {
+      font: 600 28px/1.15 "Cormorant Garamond", Georgia, serif;
+      letter-spacing: .06em;
+      margin: 10px 0 2px
+    }
+
+    header h1 em {
+      display: block;
+      font: 400 30px "Parisienne", cursive;
+      letter-spacing: 0;
+      color: var(--gold);
+      margin-top: 2px
+    }
+
+    .orn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      justify-content: center;
+      color: var(--gold);
+      margin: 14px auto;
+      max-width: 200px
+    }
+
+    .orn:before,
+    .orn:after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold))
+    }
+
+    .orn:after {
+      transform: scaleX(-1)
+    }
+
+    .door {
+      display: block;
+      width: 78%;
+      height: auto;
+      max-width: 300px;
+      margin: 12px auto 0
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      margin: 18px 16px 0;
+      padding: 26px 20px;
+      text-align: center;
+      box-shadow: 0 8px 24px rgba(120, 80, 40, .07);
+      position: relative
+    }
+
+    .card.pull {
+      margin-top: -30px
+    }
+
+    .lbl {
+      font-size: 10.5px;
+      letter-spacing: .18em;
+      color: var(--soft);
+      font-weight: 500
+    }
+
+    .card h2 {
+      font: 600 29px/1.15 "Cormorant Garamond", serif;
+      margin: 9px 0 3px;
+    }
+
+    .card p {
+      color: var(--soft);
+      font-size: 13px;
+      margin: 9px auto 0;
+    }
+
+    .names {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 17px;
+    }
+
+    .person {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 15px;
+      padding: 14px 8px;
+    }
+
+    .person strong {
+      display: block;
+      font: 600 22px "Cormorant Garamond", serif;
+      color: var(--ink);
+    }
+
+    .person span {
+      display: block;
+      color: var(--soft);
+      font-size: 11px;
+      margin-top: 5px;
+    }
+
+    .card h2 em {
+      display: block;
+      font: 400 28px "Parisienne", cursive;
+      color: var(--gold)
+    }
+
+    .card p {
+      color: var(--soft);
+      font-size: 13px;
+      max-width: 30ch;
+      margin: 10px auto 0
+    }
+
+    .ico {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      display: grid;
+      place-items: center;
+      margin: 0 auto 6px;
+      color: var(--gold);
+      background: var(--paper)
+    }
+
+    .ico svg {
+      width: 16px;
+      height: 16px
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      padding: 20px 6px
+    }
+
+    .facts div+div {
+      border-left: 1px solid var(--line)
+    }
+
+    .facts b {
+      display: block;
+      font-weight: 600;
+      font-size: 12px;
+      margin-top: 2px
+    }
+
+    .facts span {
+      font-size: 11px;
+      color: var(--soft);
+      display: block;
+      line-height: 1.35
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid var(--line);
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font: 500 11px "Plus Jakarta Sans", sans-serif;
+      letter-spacing: .08em;
+      text-decoration: none;
+      cursor: pointer
+    }
+
+    .pill.solid {
+      background: var(--olive);
+      color: #fff;
+      border-color: var(--olive)
+    }
+
+    .pill:focus-visible,
+    .cut:focus-visible {
+      outline: 2px solid var(--saffron);
+      outline-offset: 3px
+    }
+
+    .count {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-top: 16px
+    }
+
+    .count div {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 0
+    }
+
+    .count b {
+      display: block;
+      font: 600 20px "Cormorant Garamond", serif;
+      font-variant-numeric: tabular-nums
+    }
+
+    .count span {
+      font-size: 9.5px;
+      color: var(--soft);
+      letter-spacing: .1em
+    }
+
+    .btns {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 18px
+    }
+
+    .venue h3 {
+      font: 600 28px "Cormorant Garamond", serif;
+      margin-top: 10px
+    }
+
+    .tl {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      text-align: left;
+      display: grid;
+      gap: 10px
+    }
+
+    .tl li {
+      display: grid;
+      grid-template-columns: 38px 1fr;
+      gap: 12px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 14px
+    }
+
+    .tl .ico {
+      margin: 0;
+      width: 38px;
+      height: 38px
+    }
+
+    .tl h4 {
+      font: 600 17px/1.2 "Cormorant Garamond", serif
+    }
+
+    .tl time {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      background: #f3e6cf;
+      color: #7a5a24;
+      border-radius: 999px;
+      padding: 1px 10px;
+      margin: 4px 0
+    }
+
+    @media (prefers-color-scheme:dark) {
+      :root:not([data-theme="light"]) .tl time {
+        background: #4d3b24;
+        color: #f0d9ae
+      }
+    }
+
+    .tl p {
+      margin: 0;
+      max-width: none;
+      font-size: 12.5px
+    }
+
+    .gal {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 16px
+    }
+
+    .gal div {
+      aspect-ratio: 4/3;
+      border-radius: 12px;
+      display: flex;
+      place-items: center;
+      font-size: 11px;
+      color: #fff;
+      letter-spacing: .08em;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, .35)
+    }
+
+
+
+    .close {
+      text-align: center;
+      padding: 26px 20px 0
+    }
+
+    .close .script {
+      font-size: 34px;
+      line-height: 1.15;
+      display: block;
+      margin: 6px 0 4px
+    }
+
+    .foot {
+      text-align: center;
+      font-size: 11px;
+      color: var(--soft);
+      margin-top: 26px
+    }
+
+    #gate {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      display: flex;
+      justify-content: center;
+      background: var(--bg);
+      transition: opacity .8s .5s
+    }
+
+    #gate .page {
+      max-width: 430px;
+      overflow: hidden
+    }
+
+    .ribbon {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 56%;
+      height: 20px;
+      background: #d11b12;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+      transition: transform .8s cubic-bezier(.6, 0, .2, 1)
+    }
+
+    .ribbon.a {
+      right: 50%;
+      transform-origin: left
+    }
+
+    .ribbon.b {
+      left: 50%
+    }
+
+    .cut {
+      position: absolute;
+      left: 50%;
+      top: 56%;
+      transform: translate(-50%, -38%);
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      border: 4px solid #f4b73c;
+      background: #fff;
+      color: #c22;
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      z-index: 2;
+      animation: pulse 1.6s infinite
+    }
+
+    .cut svg {
+      width: 26px;
+      height: 26px
+    }
+
+    .hint {
+      position: absolute;
+      bottom: 60px;
+      left: 0;
+      right: 0;
+      text-align: center;
+      font-size: 12px;
+      color: var(--soft);
+      letter-spacing: .08em
+    }
+
+    @keyframes pulse {
+      50% {
+        box-shadow: 0 0 0 12px rgba(244, 183, 60, .25)
+      }
+    }
+
+    #gate.open {
+      opacity: 0;
+      pointer-events: none
+    }
+
+    #gate.open .ribbon.a {
+      transform: translateX(-70%) rotate(-8deg)
+    }
+
+    #gate.open .ribbon.b {
+      transform: translateX(70%) rotate(8deg)
+    }
+
+    #gate.open .cut,
+    #gate.open .hint {
+      opacity: 0
+    }
+
+    #petals {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 10;
+      overflow: hidden
+    }
+
+    .p {
+      position: absolute;
+      top: -12px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50% 0 50% 50%;
+      animation: fall linear forwards
+    }
+
+    @keyframes fall {
+      to {
+        transform: translate(var(--dx), 105vh) rotate(540deg)
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .cut {
+        animation: none
+      }
+
+      #petals {
+        display: none
+      }
+
+      #gate,
+      .ribbon {
+        transition: none
+      }
+
+      html {
+        scroll-behavior: auto
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="petals" aria-hidden="true"></div>
+
+  <!-- Door SVG reused in gate and hero -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="vineg">
+        <path d="M5 0C30 40 20 100 60 150" fill="none" stroke="#7d8f3e" stroke-width="2" />
+        <g fill="#9bb04f">
+          <ellipse cx="22" cy="30" rx="18" ry="7" transform="rotate(40 22 30)" />
+          <ellipse cx="38" cy="58" rx="18" ry="7" transform="rotate(-30 38 58)" />
+          <ellipse cx="30" cy="88" rx="18" ry="7" transform="rotate(40 30 88)" />
+          <ellipse cx="55" cy="112" rx="16" ry="6" transform="rotate(-35 55 112)" />
+          <ellipse cx="62" cy="14" rx="16" ry="6" transform="rotate(20 62 14)" />
+        </g>
+      </g>
+      <g id="doorg">
+        <rect x="60" y="30" width="180" height="210" rx="4" fill="#6a3d22" />
+        <rect x="72" y="42" width="156" height="198" fill="#7b4a2b" />
+        <g stroke="#4f2b16" stroke-width="2">
+          <path d="M150 42v198M72 100h156M72 170h156" />
+        </g>
+        <g fill="#c9984f">
+          <circle cx="138" cy="150" r="5" />
+          <circle cx="162" cy="150" r="5" />
+        </g>
+        <path d="M62 44C90 120 130 120 150 60C170 120 210 120 238 44" fill="none" stroke="#fff" stroke-width="22"
+          stroke-linecap="round" />
+        <path d="M62 44C90 120 130 120 150 60C170 120 210 120 238 44" fill="none" stroke="#e8741a" stroke-width="22"
+          stroke-linecap="round" stroke-dasharray="3 7" />
+        <path d="M66 30C96 90 130 90 150 40" fill="none" stroke="#f08a1f" stroke-width="10" stroke-linecap="round"
+          stroke-dasharray="1 7" />
+        <g fill="#fff">
+          <rect x="196" y="60" width="18" height="110" rx="9" />
+          <rect x="170" y="60" width="18" height="90" rx="9" />
+        </g>
+        <g fill="#e8741a">
+          <circle cx="205" cy="172" r="7" />
+          <circle cx="179" cy="152" r="7" />
+        </g>
+        <g fill="#6aa04a">
+          <path d="M40 240l8-70 10 70zM260 240l-8-70-10 70zM30 240l4-50 8 50zM270 240l-4-50-8 50z" />
+        </g>
+        <rect x="46" y="225" width="208" height="14" rx="3" fill="#f4eee4" />
+        <rect x="52" y="239" width="6" height="26" fill="#5a3320" />
+        <rect x="242" y="239" width="6" height="26" fill="#5a3320" />
+        <rect x="70" y="205" width="34" height="22" rx="4" fill="#c4163a" />
+        <rect x="132" y="203" width="36" height="24" rx="6" fill="#fff" />
+        <circle cx="150" cy="215" r="9" fill="#e8741a" />
+        <rect x="196" y="205" width="34" height="22" rx="4" fill="#c4163a" />
+      </g>
+    </defs>
+  </svg>
+
+  <!-- Ribbon-cutting gate -->
+  <div id="gate" role="dialog" aria-label="Cut the ribbon to open the invitation">
+    <div class="page">
+      <svg class="vine l" viewBox="0 0 90 150">
+        <use href="#vineg" />
+      </svg><svg class="vine r" viewBox="0 0 90 150">
+        <use href="#vineg" />
+      </svg>
+      <header><small class="serif" style="font-size:14px">
+          <!-- || ॐ शुभ गृहप्रवेश || -->
+          இறையருளால் இனிய தொடக்கம்
+        </small>
+        <h1>HOUSE WARMING CEREMONY<em>Grand Ribbon Cutting</em></h1>
+      </header>
+      <!-- <svg class="door" viewBox="20 20 260 260" role="img" aria-label="A decorated front door with marigold garlands">
+        <use href="#doorg" />
+      </svg> -->
+
+      <img src="img/welcome-img.jpeg" class="door" alt="Decorated front door with marigold garlands" />
+
+
+      <div class="ribbon a"></div>
+      <div class="ribbon b"></div>
+      <button class="cut" id="cutBtn" aria-label="Cut the ribbon"><svg viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="6" cy="6" r="3" />
+          <circle cx="6" cy="18" r="3" />
+          <path d="M20 4 8.1 15.9M14.5 14.5 20 20M8.1 8.1 12 12" />
+        </svg></button>
+      <p class="hint">Tap the scissors to open your invitation</p>
+    </div>
+  </div>
+
+  <main class="page">
+    <svg class="vine l" viewBox="0 0 90 150">
+      <use href="#vineg" />
+    </svg><svg class="vine r" viewBox="0 0 90 150">
+      <use href="#vineg" />
+    </svg>
+    <header>
+      <small class="serif">
+        <bold>ॐ</bold> <br> &nbsp;WITH THE DIVINE GRACE AND BLESSINGS OF<br>MADURAI MEENAKSHI AMMAN,<br>we cordially
+        invite
+        you to <br> join us in celebrating the
+      </small>
+      <h1>HOUSE WARMING<em>Ceremony</em></h1>
+      <div class="orn">✦</div>
+      <!-- <svg class="door" viewBox="20 20 260 260" role="img" aria-label="Decorated door">
+        <use href="#doorg" />
+      </svg> -->
+
+      <img src="img/welcome-img.jpeg" class="door" alt="Decorated front door with marigold garlands" />
+    </header>
+
+    <section class="card pull">
+      <div class="lbl">YOU ARE INVITED</div>
+      <div class="ico" style="margin-top:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.6">
+          <path d="M3 11 12 3l9 8M5 10v10h14V10" />
+        </svg></div>
+      <h2>Our New Home<em>Our New Beginning</em></h2>
+      <div class="orn">✦</div>
+      <p>With gratitude to the Almighty, we welcome you to be a part of our House Warming Ceremony and share in our
+        happiness.</p>
+    </section>
+
+    <section class="card">
+      <div class="lbl">THE HOSTS</div>
+      <h2>With joy in our hearts</h2>
+      <div class="names">
+        <div class="person">
+          <strong>Thirumalavan D</strong>
+          <span>Son of Dharmaraj S</span>
+          <span>and Shanbagavalli D</span>
+        </div>
+        <div class="person">
+          <strong>Sampreethi A</strong>
+          <span>Daughter of Ayyar A</span>
+          <span>and Sujatha A</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" style="padding:14px 22px">
+
+      <div class="lbl">PLEASE JOIN US</div>
+
+      <h2 style="text-align:center; margin:8px 0 0px;">
+        Sunday, 22 Nov 2026
+      </h2>
+      <p class="auspicious">காலை சுபவேளை</p>
+
+      <div class="facts">
+
+        <div>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <rect x="4" y="5" width="16" height="15" rx="2" />
+              <path d="M4 10h16M9 3v4M15 3v4" />
+            </svg></div><span class="lbl">DATE</span><b>Sunday</b><span>Nov 22, 2026</span>
+
+        </div>
+        <div>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="9" />
+              <path d="M12 7v5l3 2" />
+            </svg></div><span class="lbl">TIME</span><b>6:00 AM</b><span>Onwards</span>
+        </div>
+        <div>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M3 11 12 3l9 8M5 10v10h14V10" />
+            </svg></div><span class="lbl">CEREMONY</span><b>7:45 - 8:45 AM</b><span>Grahapravesham</span>
+        </div>
+      </div>
+      <a class="pill" id="cal" target="_blank" rel="noopener">＋ ADD TO CALENDAR</a>
+    </section>
+
+    <section class="card">
+      <div class="lbl">COUNTDOWN TO OUR NEW HOME</div>
+      <div class="count" role="timer" aria-live="off">
+        <div><b id="d">–</b><span>DAYS</span></div>
+        <div><b id="h">–</b><span>HOURS</span></div>
+        <div><b id="m">–</b><span>MINUTES</span></div>
+        <div><b id="s">–</b><span>SECONDS</span></div>
+      </div>
+    </section>
+
+
+
+    <section class="card">
+      <div class="lbl">AUSPICIOUS CEREMONIES</div>
+      <h2 style="font-size:28px">Rituals &amp; Itinerary</h2>
+      <div class="orn">✦</div>
+      <ul class="tl">
+        <li>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M12 3c3 4 5 6 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-6 1-9z" />
+            </svg></div>
+          <div>
+            <h4>Ganapathi Homa</h4>
+            <!-- <time>08:30 AM</time> -->
+            <p>Purification and seeking remover of obstacles</p>
+          </div>
+        </li>
+        <li>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M3 11 12 3l9 8M5 10v10h14V10" />
+            </svg></div>
+          <div>
+            <h4>Gruhapravesham Muhurtham</h4>
+            <!-- <time>10:00 AM</time> -->
+            <p>Auspicious door entry and milk boiling ritual</p>
+          </div>
+        </li>
+        <li>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2" />
+            </svg></div>
+          <div>
+            <h4>Satyanarayana Pooja &amp; Vastu Shanti</h4>
+            <!-- <time>11:30 AM</time> -->
+            <p>Blessings for peace, prosperity and harmony</p>
+          </div>
+        </li>
+        <li>
+          <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path d="M4 12h16a8 8 0 0 1-16 0zM8 6c0 2 2 2 2 4M13 5c0 2 2 2 2 5" />
+            </svg></div>
+          <div>
+            <h4>Traditional Festive Feast</h4>
+            <!-- <time>12:45 PM</time> -->
+            <p>A Festive Spread of Authentic Satvik Delicacies</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <!-- <div class="lbl">
+        ப்ரீதிதிருவகம்</div> -->
+
+      <h3 style="text-align:center; margin:8px 0 0px;">
+        ப்ரீதித்திருவகம்
+      </h3>
+
+      <div>
+
+        <img src="img/homeboard.jpeg" class="door" alt="Decorated front door with marigold garlands" />
+      </div>
+      <!-- <div class="g2">Living room</div>
+        <div class="g3">Entrance</div>
+        <div class="g4">Sunroom</div> -->
+
+    </section>
+
+
+    <section class="card venue">
+      <div class="lbl">VENUE &amp; LOCATION</div>
+      <div class="ico" style="margin-top:8px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="1.6">
+          <path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11z" />
+          <circle cx="12" cy="10" r="2.5" />
+        </svg></div>
+      <h3>Our New Home</h3>
+      <div class="orn">✦</div>
+      <p id="addr" style="max-width:26ch">2/732A, Meenakshi Nagar, Sowdamigai Nagar, Kanakkampalayam,
+        Tiruppur, Tamil Nadu 641666,
+        India</p>
+      <div class="btns"><a class="pill solid" id="dir" target="_blank" rel="noopener">➤ GET DIRECTIONS</a><button
+          class="pill" id="copy">⧉ COPY ADDRESS</button></div>
+
+      <p class="qr-note">Scan the QR code for the exact location</p>
+
+
+      <div>
+
+        <a href="https://www.google.com/maps?q=11.190208,77.362283" target="_blank" rel="noopener"
+          aria-label="Open house location in Google Maps" style="display:flex; justify-content:center;">
+
+
+          <img src="img/location-qr.png" class="door" alt="Decorated front door with marigold garlands" />
+
+        </a>
+      </div>
+
+
+    </section>
+
+    <section class="close">
+      <span class="serif" style="color:var(--soft)">With love and gratitude,</span>
+      <span class="script">We look forward to your presence</span>
+      <div class="btns"><button class="pill" id="share">SHARE INVITATION</button><button class="pill solid"
+          onclick="scrollTo({top:0})">↑ BACK TO TOP</button></div>
+      <p class="foot">Designed with <span style="color:#d33">♥</span> for our family</p>
+    </section>
+  </main>
+
+  <script>
+
+
+
+    // ── Edit these to personalise the invitation ──
+    var EVENT = {
+      title: "Grahapravesam - Thirumalavan & Sampreethi",
+      date: new Date(2026, 10, 22, 7, 45, 0),
+      place: "2/732A, Meenakshi Nagar, Sowdamigai Nagar, Kanakkampalayam,Tiruppur, Tamil Nadu 641666, India"
+    };
+
+    var gate = document.getElementById("gate"), petals = document.getElementById("petals");
+    function pad(n) { return String(n).padStart(2, "0") }
+    function tick() {
+      var t = Math.max(0, EVENT.date - new Date()), s = Math.floor(t / 1000);
+      d.textContent = Math.floor(s / 86400); h.textContent = pad(Math.floor(s % 86400 / 3600)); m.textContent = pad(Math.floor(s % 3600 / 60)); document.getElementById("s").textContent = pad(s % 60)
+    }
+    tick(); setInterval(tick, 1000);
+
+    function burst(n) {
+      var c = ["#e8741a", "#f4b73c", "#c4163a", "#8aa04a", "#fff"];
+      if (matchMedia("(prefers-reduced-motion:reduce)").matches) return;
+      for (var i = 0; i < n; i++) {
+        var e = document.createElement("i"); e.className = "p";
+        e.style.cssText = "left:" + Math.random() * 100 + "%;background:" + c[i % 5] + ";--dx:" + (Math.random() * 120 - 60) + "px;animation-duration:" + (3 + Math.random() * 4) + "s;animation-delay:" + Math.random() * 1.2 + "s";
+        petals.appendChild(e); setTimeout(function (x) { x.remove() }, 9000, e)
+      }
+    }
+
+    document.getElementById("cutBtn").onclick = function () { gate.classList.add("open"); burst(60); setTimeout(function () { gate.hidden = true }, 1500); setInterval(function () { burst(8) }, 6000) };
+
+    var q = encodeURIComponent(EVENT.place);
+    document.getElementById("dir").href = "https://www.google.com/maps/search/?api=1&query=" + q;
+    var f = function (d) { return d.toISOString().replace(/[-:]|\.\d{3}/g, "") }, end = new Date(EVENT.date.getTime() + 4 * 36e5);
+    document.getElementById("cal").href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(EVENT.title) + "&dates=" + f(EVENT.date) + "/" + f(end) + "&location=" + q;
+
+    document.getElementById("copy").onclick = function () {
+      var b = this;
+      function ok() { b.textContent = "✓ COPIED"; setTimeout(function () { b.textContent = "⧉ COPY ADDRESS" }, 1800) }
+      try { navigator.clipboard.writeText(EVENT.place).then(ok, ok) } catch (e) { ok() }
+    };
+    document.getElementById("share").onclick = function () {
+      var b = this;
+      try { if (navigator.share) return navigator.share({ title: EVENT.title, text: "You’re invited to our House Warming Ceremony!", url: location.href.split("#")[0] }) } catch (e) { }
+      try { navigator.clipboard.writeText(location.href) } catch (e) { }
+      b.textContent = "LINK COPIED"; setTimeout(function () { b.textContent = "SHARE INVITATION" }, 1800)
+    };
+  </script>
+</body>
+
+</html>
