@@ -948,9 +948,11 @@
     <section class="close">
       <span class="serif" style="color:var(--soft)">With love and gratitude,</span>
       <span class="script">We look forward to your presence</span>
-      <div class="btns"><button class="pill" id="share">SHARE INVITATION</button><button class="pill solid"
-          onclick="scrollTo({top:0})">↑ BACK TO TOP</button></div>
-      <p class="foot">Designed with <span style="color:#d33">♥</span> for our family</p>
+      <div class="btns"><button class="pill" id="share">SHARE INVITATION</button>
+        <button class="pill solid" id="backToTop">
+          ↑ BACK TO TOP
+        </button>
+        <p class="foot">Designed with <span style="color:#d33">♥</span> for our family</p>
     </section>
   </main>
 
@@ -966,6 +968,8 @@
     };
 
     var gate = document.getElementById("gate"), petals = document.getElementById("petals");
+    // Prevent scrolling before opening the invitation
+    document.body.style.overflow = "hidden";
     function pad(n) { return String(n).padStart(2, "0") }
     function tick() {
       var t = Math.max(0, EVENT.date - new Date()), s = Math.floor(t / 1000);
@@ -983,7 +987,31 @@
       }
     }
 
-    document.getElementById("cutBtn").onclick = function () { gate.classList.add("open"); burst(60); setTimeout(function () { gate.hidden = true }, 1500); setInterval(function () { burst(8) }, 6000) };
+    // document.getElementById("cutBtn").onclick = function () { gate.classList.add("open"); burst(60); setTimeout(function () { gate.hidden = true }, 1500); setInterval(function () { burst(8) }, 6000) };
+
+    document.getElementById("cutBtn").onclick = function () {
+
+      // Always start the invitation from the top
+      window.scrollTo(0, 0);
+
+      gate.classList.add("open");
+      burst(60);
+
+      setTimeout(function () {
+        gate.hidden = true;
+
+        // Allow scrolling after opening
+        document.body.style.overflow = "";
+
+        // Ensure invitation starts at the top
+        window.scrollTo(0, 0);
+
+      }, 1500);
+
+      setInterval(function () {
+        burst(8);
+      }, 6000);
+    };
 
     var q = encodeURIComponent(EVENT.place);
     document.getElementById("dir").href = "https://www.google.com/maps/search/?api=1&query=" + q;
@@ -1001,6 +1029,11 @@
       try { navigator.clipboard.writeText(location.href) } catch (e) { }
       b.textContent = "LINK COPIED"; setTimeout(function () { b.textContent = "SHARE INVITATION" }, 1800)
     };
+
+    document.getElementById("backToTop").onclick = function () {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    };
+
   </script>
 
 
