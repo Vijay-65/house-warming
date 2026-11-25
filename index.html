@@ -1002,6 +1002,21 @@
       b.textContent = "LINK COPIED"; setTimeout(function () { b.textContent = "SHARE INVITATION" }, 1800)
     };
   </script>
+
+
+
+  <audio id="bgMusic" loop>
+    <source src="audio/welcome-audio.mp3" type="audio/mpeg">
+  </audio>
+
+  <script>
+    const music = document.getElementById("bgMusic");
+
+    document.addEventListener("click", function playMusic() {
+      music.play();
+      document.removeEventListener("click", playMusic);
+    });
+  </script>
 </body>
 
 </html>
