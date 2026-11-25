@@ -58,6 +58,11 @@
       }
     } */
 
+    .black-text {
+      color: #000000;
+      font-weight: bold;
+    }
+
     @media (prefers-color-scheme:dark) {
       :root:not([data-theme="light"]) {
         --bg: #d2c8c2;
@@ -172,6 +177,42 @@
 
     .orn:after {
       transform: scaleX(-1)
+    }
+
+    .om-logo {
+      display: block;
+      width: 35px;
+      height: 35px;
+      object-fit: contain;
+      margin: 0 auto 8px;
+    }
+
+    .image-card {
+      padding: 0 !important;
+      overflow: hidden;
+    }
+
+    .section-image {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: none;
+      margin: 0;
+      padding: 20px 20px;
+      object-fit: cover;
+    }
+
+    .person .parent-name {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-size: 15px;
+      font-weight: 800;
+      font-style: italic;
+      color: var(--gold);
+      line-height: 1.5;
+      margin-top: 8px;
+      text-align: center;
+      letter-spacing: 0.3px;
     }
 
     .door {
@@ -687,9 +728,14 @@
     </svg>
     <header>
       <small class="serif">
-        <bold>ॐ</bold> <br> &nbsp;WITH THE DIVINE GRACE AND BLESSINGS OF<br>MADURAI MEENAKSHI AMMAN,<br>we cordially
-        invite
-        you to <br> join us in celebrating the
+        <!-- <bold>ॐ</bold> -->
+        <img src="img/om2.png" class="om-logo" alt="Om symbol">
+
+        <!-- <img src="img/om.jpg" class="door" alt="Decorated front door with marigold garlands" /> -->
+
+        <br> <span class="black-text">WITH THE DIVINE GRACE AND BLESSINGS OF<br>MADURAI MEENAKSHI AMMAN,<br>we cordially
+          invite
+          you to <br> join us in celebrating the</span>
       </small>
       <h1>HOUSE WARMING<em>Ceremony</em></h1>
       <div class="orn">✦</div>
@@ -712,7 +758,23 @@
         happiness.</p>
     </section>
 
-    <section class="card">
+    <section class="card image-card">
+      <!-- <div class="lbl">
+        ப்ரீதிதிருவகம்</div> -->
+
+      <!-- <h3 style="text-align:center; margin:8px 0 0px;">
+        ப்ரீதித்திருவகம்
+      </h3> -->
+
+      <img src="img/homeboardUpdated.jpg" class="section-image" alt="House image" />
+
+      <!-- <div class="g2">Living room</div>
+        <div class="g3">Entrance</div>
+        <div class="g4">Sunroom</div> -->
+
+    </section>
+
+    <!-- <section class="card">
       <div class="lbl">THE HOSTS</div>
       <h2>With joy in our hearts</h2>
       <div class="names">
@@ -727,6 +789,31 @@
           <span>and Sujatha A</span>
         </div>
       </div>
+    </section> -->
+
+    <section class="card">
+      <div class="lbl">THE HOSTS</div>
+      <h2>With joy in our hearts</h2>
+
+      <div class="names">
+        <div class="person">
+          <strong>Thirumalavan D</strong>
+          <span class="parent-name">
+            Son of <br>Dharmaraj S
+            and
+            Shanbagavalli D
+          </span>
+        </div>
+
+        <div class="person">
+          <strong>Sampreethi A</strong>
+          <span class="parent-name">
+            Daughter of <br>Ayyar A
+            and <br>
+            Sujatha A
+          </span>
+        </div>
+      </div>
     </section>
 
     <section class="card" style="padding:14px 22px">
@@ -734,7 +821,7 @@
       <div class="lbl">PLEASE JOIN US</div>
 
       <h2 style="text-align:center; margin:8px 0 0px;">
-        Sunday, 22 Nov 2026
+        Sunday, 29 Nov 2026
       </h2>
       <p class="auspicious">காலை சுபவேளை</p>
 
@@ -744,7 +831,7 @@
           <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
               <rect x="4" y="5" width="16" height="15" rx="2" />
               <path d="M4 10h16M9 3v4M15 3v4" />
-            </svg></div><span class="lbl">DATE</span><b>Sunday</b><span>Nov 22, 2026</span>
+            </svg></div><span class="lbl">DATE</span><b>Sunday</b><span>Nov 29, 2026</span>
 
         </div>
         <div>
@@ -823,23 +910,7 @@
       </ul>
     </section>
 
-    <section class="card">
-      <!-- <div class="lbl">
-        ப்ரீதிதிருவகம்</div> -->
 
-      <h3 style="text-align:center; margin:8px 0 0px;">
-        ப்ரீதித்திருவகம்
-      </h3>
-
-      <div>
-
-        <img src="img/homeboard.jpeg" class="door" alt="Decorated front door with marigold garlands" />
-      </div>
-      <!-- <div class="g2">Living room</div>
-        <div class="g3">Entrance</div>
-        <div class="g4">Sunroom</div> -->
-
-    </section>
 
 
     <section class="card venue">
@@ -890,7 +961,7 @@
     // ── Edit these to personalise the invitation ──
     var EVENT = {
       title: "Grahapravesam - Thirumalavan & Sampreethi",
-      date: new Date(2026, 10, 22, 7, 45, 0),
+      date: new Date(2026, 10, 29, 7, 45, 0),
       place: "2/732A, Meenakshi Nagar, Sowdamigai Nagar, Kanakkampalayam,Tiruppur, Tamil Nadu 641666, India"
     };
 
